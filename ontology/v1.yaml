@@ -1,0 +1,660 @@
+version: 1
+durum: ONAYLANDI
+kaynak_kume_sayisi: 254
+suites:
+- campaign
+- personalisation
+- ortak
+modules:
+- name: Email Engine
+  suite: campaign
+  anchor: confluence
+  kanit: 486
+  birlesen:
+  - E-posta gönderimi
+  - Mail gönderimi
+  - Mailing
+  - SMTP mail gönderimi
+  - SMTP E-posta Gönderimi
+  - Bulk e-posta gönderimi
+  - Toplu e-posta gönderimi
+  - Bülten kampanya gönderimi
+  - E-posta iletimi
+  - Bulk Mail Gönderimi
+  bolunme:
+    Email Engine: 273
+    REST/SOAP API: 62
+    Campaign Management: 51
+    System & Infrastructure: 12
+- name: Email Deliverability
+  suite: campaign
+  anchor: YOK
+  kanit: 253
+  not: 'YENİ ve BÜYÜK. DNS/gönderim domaini KARARINIZLA buraya katıldı — aynı ekip bakıyor. Bugün Email
+    Engine ile System & Infrastructure arasında bölünmüş. Tek terim dünyası: DKIM, SPF, DMARC, MX, TXT,
+    subdomain, Spamhaus, URIBL, hard/soft bounce, google-site-verification.'
+  birlesen:
+  - E-posta teslimatı
+  - E-posta deliverability
+  - E-posta teslim edilebilirliği
+  - Spam analizi
+  - E-posta kampanyası spam analizi
+  - Kampanya Spam Analizi
+  - E-posta gönderimi / spam filtreleme
+  - E-posta gönderimi / kimlik doğrulama
+  - E-posta Kimlik Doğrulama
+  - Transactional Mail Teslimatı
+  - E-posta kampanya teslimatı
+  - DNS kayıtları
+  - Gönderim Domaini
+  - Gönderim Domaini / DNS
+  - E-posta gönderimi / DNS
+  - Gönderim Adresi Ayarı
+  - Gönderici doğrulama
+  - Hesap Açılışı
+  bolunme:
+    Email Engine: 167
+    System & Infrastructure: 59
+    Account & User Management: 4
+- name: Transactional Email
+  suite: campaign
+  anchor: confluence
+  kanit: 175
+  birlesen:
+  - Transactional e-posta gönderimi
+  - Transactional Mail Gönderimi
+  - Transactional Mail
+  - Transactional E-posta
+  - Transactional Email
+  - Transactional gönderim
+  - API e-posta gönderimi
+  - Transactional e-posta raporlama
+  - fatura e-posta gönderimi
+  - Fatura e-posta bildirimi
+  - Mail bildirimi
+  bolunme:
+    Email Engine: 92
+    REST/SOAP API: 54
+    Reporting & Analytics: 10
+- name: Email Template
+  suite: campaign
+  anchor: ui
+  kanit: 158
+  birlesen:
+  - E-posta şablonu
+  - Mail şablonu
+  - Şablon Sihirbazı
+  - mailing şablonu
+  - E-posta kampanya şablonu
+  - E-posta tasarımı
+  - E-posta HTML şablonu
+  - E-posta kampanya görselleri
+  - E-posta Footer
+  - HTML mailing guideline
+  bolunme:
+    Email Engine: 78
+    Content & Template Management: 60
+    Campaign Management: 10
+- name: SMS Gateway
+  suite: campaign
+  anchor: confluence
+  kanit: 155
+  birlesen:
+  - SMS gönderimi
+  - SMS kampanya gönderimi
+  - SMS Kampanya
+  - SMS entegrasyonu
+  - OTP SMS gönderimi
+  - Toplu SMS Kampanyası
+  - Bulk SMS Kampanya Gönderimi
+  - SMS iletişim izni
+  bolunme:
+    SMS Gateway: 68
+    Campaign Management: 41
+    REST/SOAP API: 26
+    Integration: 12
+- name: WhatsApp
+  suite: campaign
+  anchor: YOK
+  kanit: 0
+  not: 'ÜRÜN BİLGİSİ ile eklendi, veriden keşfedilmedi. Euromessage omnichannel kanallarından biri ama
+    bu pencerede (2025-01+) destek hacmi yok. Korpusta ''whatsapp'' geçen 54 olayın tamamına yakını tesadüfi:
+    mailing içindeki WhatsApp linki, WhatsApp''ı tanıtan Target kurgusu gibi. Yalnızca #337743 (Desk360
+    WhatsApp API satın alımı) gerçek entegrasyon. Enum''a şimdi girer; bilet gelmeye başladığında geriye
+    dönük eşleme gerekmez.'
+  birlesen: []
+  bolunme: {}
+- name: Mobile Push
+  suite: campaign
+  anchor: confluence
+  kanit: 227
+  birlesen:
+  - Push Bildirim
+  - Push gönderimi
+  - App Push
+  - Push Kampanya
+  - Push kampanya gönderimi
+  - Mobil Push Kampanyası
+  - App Push Bildirim
+  - Mobil Push
+  - Mobil Push Bildirim
+  - Euromessage push gönderimi
+  - Push segmentasyonu
+  bolunme:
+    Mobile Push: 175
+    Campaign Management: 31
+    REST/SOAP API: 11
+    CDP & Segmentation: 8
+- name: Transactional Push
+  suite: campaign
+  anchor: YOK
+  kanit: 30
+  not: 'YENİ. Bugün REST/SOAP API (13) ile Mobile Push (4) arasında bölünmüş. Kendi hata kodları var:
+    AUTH_TOKEN_CANNOT_BE_NULL, MEMBER_TOKEN_DOES_NOT_EXISTS.'
+  birlesen:
+  - Transactional Push
+  - Transactional Gönderim Raporları
+  bolunme:
+    REST/SOAP API: 16
+    Mobile Push: 6
+    Reporting & Analytics: 4
+- name: Web Push
+  suite: campaign
+  anchor: confluence
+  kanit: 224
+  birlesen:
+  - Web Push
+  - Web Push Bildirimleri
+  - Web push kampanya
+  - Web Push entegrasyonu
+  - Web Push Gönderimi
+  - Web push opt-in
+  - WEBPUSH kampanya gönderimi
+  - Web push raporlama
+  - Push Token Raporlama
+  bolunme:
+    Web Push: 116
+    Integration: 11
+    Campaign Management: 11
+    Reporting & Analytics: 9
+- name: In-App Messaging
+  suite: personalisation
+  anchor: confluence
+  kanit: 30
+  birlesen:
+  - in-app kurgu
+  - In-app pop-up
+  - Pop-up kurgusu
+  bolunme:
+    In-App Messaging: 20
+    Content & Template Management: 5
+    CDP & Segmentation: 2
+- name: Üye Silme
+  suite: ortak
+  anchor: YOK
+  kanit: 124
+  not: 'YENİ ve BÜYÜK. Bugün tamamen Data Management içinde eriyor. Oysa kendi DB yordamı var: IX_CUQA_EMAIL_ID
+    index''i, #temp tablo, MAXDOP 8, NOLOCK. Silme talebi operasyonel olarak ayrı bir akış.'
+  birlesen:
+  - Üye Silme
+  - Üye silme işlemi
+  - Veri silme
+  - EUROMsg alerter üye silme
+  bolunme:
+    Data Management: 122
+    Audience: 2
+- name: Scheduled Export
+  suite: ortak
+  anchor: YOK
+  kanit: 116
+  not: 'YENİ ve BÜYÜK. Tamamı Data Management''ta. Kendi altsistemi: SFTP/FTP, ConnectViaSftp, ChilkatLog,
+    Session timeout, ConnectFailReason.'
+  birlesen:
+  - Scheduled Export
+  - Scheduled Export (SFTP)
+  - Zamanlanmış Export
+  - Scheduled Export FTP
+  bolunme:
+    Data Management: 116
+- name: Üye Yükleme
+  suite: ortak
+  anchor: ui
+  kanit: 233
+  birlesen:
+  - Üye Yükleme
+  - Gelişmiş Üye Yükleme
+  - Liste Yükleme
+  - Data yükleme
+  - Veri yükleme
+  - Üye listesi yükleme
+  - Üye (data) yükleme
+  - Kitle Yükleme
+  - Dosya Yükleme
+  - CSV yükleme
+  - Liste Veri Yükleme
+  - FTP veri yükleme
+  - Toplu üye yükleme
+  - üye ekleme
+  - Üye Yönetimi / Veri Yükleme
+  bolunme:
+    Data Management: 220
+    REST/SOAP API: 8
+    Consent Management (IYS): 3
+- name: Veri Ambarı (DWH)
+  suite: ortak
+  anchor: ui
+  kanit: 39
+  birlesen:
+  - Veri Ambarı
+  - Veri ambarı yükleme
+  bolunme:
+    Data Management: 30
+    Audience: 4
+    REST/SOAP API: 3
+- name: Üye ve İzin Yönetimi
+  suite: ortak
+  anchor: ui
+  kanit: 108
+  birlesen:
+  - Üye Yönetimi
+  - E-posta Gönderim İzni
+  - E-posta gönderim izni
+  - Email İzin Yönetimi
+  - E-posta izin yönetimi
+  - Üye yönetimi / Kanal izinleri
+  - Üye Yönetimi / E-posta İzni
+  - Üye adres yönetimi
+  - Üye listesi yönetimi
+  - Liste Yönetimi
+  - E-posta gönderim izin yönetimi
+  bolunme:
+    Data Management: 62
+    Audience: 20
+    Consent Management (IYS): 13
+- name: Segmentasyon
+  suite: ortak
+  anchor: ui
+  kanit: 117
+  birlesen:
+  - Segmentasyon
+  - Live Segment
+  - Segment oluşturma
+  - Kampanya Segmenti
+  - E-posta segmentasyonu
+  - Audience > Live Segment
+  - Test Listesi
+  bolunme:
+    CDP & Segmentation: 47
+    Audience: 32
+    Segment: 4
+- name: REST/SOAP API
+  suite: ortak
+  anchor: api
+  kanit: 40
+  birlesen:
+  - REST API
+  - API Entegrasyonu
+  - Authentication
+  - Euromessage entegrasyonu
+  bolunme:
+    REST/SOAP API: 45
+    Account & User Management: 3
+- name: API Erişimi
+  suite: ortak
+  anchor: YOK
+  kanit: 65
+  not: YENİ. Hem servis hesabı sağlama (*_livem_wsuser oluşturma, şifre reset) hem çalışma anı erişim
+    hatası (Invalid IP!, Code 41). İkisi aynı bileşenin farklı FAALİYETİ; faaliyet ayrı eksende olduğu
+    için tek modül.
+  birlesen:
+  - API erişimi
+  - IP Whitelist
+  - API whitelist
+  - REST API Login
+  - API Kullanıcı Yönetimi
+  - API kullanıcı yönetimi
+  - API kullanıcısı yönetimi
+  bolunme:
+    REST/SOAP API: 59
+    Integration: 2
+    Email Engine: 2
+- name: Üye Entegrasyonu
+  suite: ortak
+  anchor: confluence
+  kanit: 47
+  birlesen:
+  - Üye Entegrasyonu
+  bolunme:
+    Integration: 36
+    REST/SOAP API: 8
+    Data Management: 3
+- name: Ürün Feed Entegrasyonu
+  suite: personalisation
+  anchor: YOK
+  kanit: 27
+  not: YENİ. XML feed / ProductCode / item_group_id. Bugün Integration içinde.
+  birlesen:
+  - Ürün Entegrasyonu
+  - XML ürün feed
+  bolunme:
+    Integration: 20
+    Data Management: 4
+    Campaign Management: 2
+- name: Event Entegrasyonu
+  suite: personalisation
+  anchor: YOK
+  kanit: 43
+  not: YENİ. GTM, visilabs.js, DataLayer, webview, om.gif. Bugün Integration'da.
+  birlesen:
+  - Event entegrasyonu
+  - Event takibi
+  - Visitor entegrasyonu
+  bolunme:
+    Integration: 29
+    CDP & Segmentation: 8
+    Web Recommendation: 2
+- name: Reklam Platformu Entegrasyonu
+  suite: ortak
+  anchor: YOK
+  kanit: 102
+  not: 'YENİ. Google Ads, Facebook Custom Audience, Criteo, Adwords segment gönderimi. Bugün Integration
+    + CDP & Segmentation arasında bölünmüş. Ortak hata dünyası: OAuth, PermissionDenied, PopulateUserList,
+    access token.'
+  birlesen:
+  - Google Ads segment gönderimi
+  - Google Ads segment entegrasyonu
+  - Google Ads entegrasyonu
+  - Adwords segment gönderimi
+  - Adwords segment entegrasyonu
+  - Facebook segment gönderimi
+  - Facebook Custom Audience segment gönderimi
+  - Facebook Custom Audience entegrasyonu
+  - Criteo entegrasyonu
+  - Criteo segment gönderimi
+  bolunme:
+    Integration: 104
+    CDP & Segmentation: 21
+    Segment: 2
+- name: Consent / İYS
+  suite: ortak
+  anchor: confluence
+  kanit: 87
+  birlesen:
+  - İYS entegrasyonu
+  - IYS entegrasyonu
+  - IYS izin yönetimi
+  bolunme:
+    Consent Management (IYS): 48
+    Integration: 17
+    REST/SOAP API: 11
+- name: Mobil SDK Entegrasyonu
+  suite: campaign
+  anchor: confluence
+  kanit: 12
+  birlesen:
+  - Mobil Push Entegrasyonu
+  bolunme:
+    Mobile Push: 6
+    Integration: 6
+- name: Panel Erişimi
+  suite: ortak
+  anchor: YOK
+  kanit: 105
+  not: YENİ ve BÜYÜK. Login, çerez, VPN, pasif hesap, ödenmemiş fatura. Bugün tamamı Account & User Management
+    etiketi altında eriyor.
+  birlesen:
+  - Panel giriş
+  - Panel Giriş / Login
+  - Giriş (Login)
+  - Kullanıcı Girişi
+  - Hesap Girişi
+  - Login
+  - Panel erişimi
+  - Hesap erişimi
+  - Panel
+  bolunme:
+    Account & User Management: 101
+    CDP & Segmentation: 1
+    REST/SOAP API: 2
+- name: Şifre Yönetimi
+  suite: ortak
+  anchor: YOK
+  kanit: 82
+  not: 'YENİ. Kendi kural seti var: minimum 9 karakter, tekrarlı karakter yasağı, yıldız (*) kısıtı, özel
+    karakter kuralları. Şifre sıfırlama akışı ayrı.'
+  birlesen:
+  - Şifre sıfırlama
+  - RMC panel giriş / şifre yönetimi
+  - Hesap ve şifre yönetimi
+  - Şifre değiştirme
+  - Giriş / Şifre Sıfırlama
+  bolunme:
+    Account & User Management: 79
+    Email Engine: 3
+- name: Kullanıcı ve Yetki Yönetimi
+  suite: ortak
+  anchor: YOK
+  kanit: 60
+  not: 'YENİ. YALNIZCA panel kullanıcısı: subuser, rol, admin, yetki. API servis hesapları (*_livem_wsuser)
+    buraya DEĞİL, API Erişimi''ne gider — beş vakanın beşinde de IP whitelist ile birlikte geçiyorlardı.'
+  birlesen:
+  - Kullanıcı Yönetimi
+  - Kullanıcı yetkilendirme
+  - Kullanıcı ve yetki yönetimi
+  - subuser yönetimi
+  - Admin hesap yönetimi
+  - Hesap yönetimi
+  bolunme:
+    Account & User Management: 63
+    Management: 1
+- name: SSL Sertifikası
+  suite: ortak
+  anchor: YOK
+  kanit: 74
+  not: YENİ. PFX, CSR, wildcard sertifika, sertifika yenileme. Bugün System & Infrastructure + Email Engine
+    arasında bölünmüş.
+  birlesen:
+  - SSL Sertifikası
+  - SSL sertifika yönetimi
+  bolunme:
+    System & Infrastructure: 52
+    Email Engine: 13
+    Account & User Management: 5
+- name: Gönderim Limitleri
+  suite: ortak
+  anchor: YOK
+  kanit: 31
+  not: YENİ. Aylık gönderim adedi, rate limit, X-RateLimit, üye limiti, CPM.
+  birlesen:
+  - Gönderim limiti
+  - E-posta gönderim limiti
+  - Email gönderim limiti
+  - API Mail Gönderimi
+  bolunme:
+    Email Engine: 9
+    REST/SOAP API: 8
+    Account & User Management: 8
+    Data Management: 6
+- name: Kampanya Yönetimi
+  suite: campaign
+  anchor: ui
+  kanit: 296
+  birlesen:
+  - E-posta kampanya gönderimi
+  - Kampanya gönderimi
+  - E-posta Kampanyası
+  - Toplu e-posta kampanyası
+  - Mail Kampanyası
+  - Kampanya Yönetimi
+  - E-posta Kampanya Kurulumu
+  - Email Kampanya
+  - Email Campaign
+  - Kampanya oluşturma
+  - Kampanya Onayı
+  - Campaign Management
+  - Mailing Kampanyası
+  - Kampanya Mail Gönderimi
+  - E-posta pazarlama
+  - Euromessage e-posta gönderimi
+  bolunme:
+    Campaign Management: 187
+    Email Engine: 77
+    Consent Management (IYS): 6
+- name: Zamanlanmış Kampanya
+  suite: campaign
+  anchor: ui
+  kanit: 33
+  birlesen:
+  - Zamanlanmış Kampanyalar
+  - Zamanlanmış e-posta kampanyası
+  - Zamanlanmış kampanya gönderimi
+  bolunme:
+    Campaign Management: 25
+    CDP & Segmentation: 2
+    Data Management: 1
+- name: Tetiklenmiş Kampanya
+  suite: campaign
+  anchor: ui
+  kanit: 10
+  birlesen:
+  - Tetiklenmiş e-posta kampanyası
+  bolunme:
+    Campaign Management: 9
+    Integration: 1
+- name: Autopilot
+  suite: campaign
+  anchor: ui
+  kanit: 18
+  birlesen:
+  - Autopilot
+  - Autopilot kurgusu
+  bolunme:
+    Autopilot & Triggering: 11
+    Autopilot: 5
+    Account & User Management: 1
+- name: A/B Testing
+  suite: campaign
+  anchor: ui
+  kanit: 9
+  birlesen:
+  - E-posta A/B Test
+  bolunme:
+    A/B Testing: 3
+    Campaign Management: 2
+    Email Engine: 1
+- name: Target Kurguları
+  suite: personalisation
+  anchor: ui
+  kanit: 108
+  birlesen:
+  - Popup kurgusu
+  - Popup
+  - Exit Intent Popup
+  - Expanding Modal Banner
+  - Expanding Modal
+  - Kulakçık kurguları
+  - Dinamik bar banner
+  - Sepet üstü banner
+  - Banner Widget
+  - Anasayfa Widget
+  - Kurgu hedefleme
+  - Kampanya kurgusu
+  - Notification Icon
+  - Çarkıfelek (Spin to Win)
+  - Sepet Sayfası
+  bolunme:
+    CDP & Segmentation: 42
+    Target: 32
+    Content & Template Management: 34
+- name: Web Recommendation
+  suite: personalisation
+  anchor: confluence
+  kanit: 122
+  birlesen:
+  - Web Recommendation
+  - Web Recommendation Widget
+  - Recommendation widget
+  - Web recommendation kurgusu
+  - Ürün Detay Widget
+  - Ürün detay sayfası
+  - ürün detay sayfası widget
+  - Widget
+  - Social Proof
+  - Kombin Ürün
+  bolunme:
+    Web Recommendation: 88
+    CDP & Segmentation: 16
+    Target: 9
+- name: Search Recommendation
+  suite: personalisation
+  anchor: ui
+  kanit: 10
+  birlesen:
+  - Search Recommendation
+  bolunme:
+    Web Recommendation: 6
+    Recommend: 2
+    Integration: 1
+- name: Kampanya Raporları
+  suite: campaign
+  anchor: ui
+  kanit: 274
+  birlesen:
+  - Kampanya Raporları
+  - E-posta kampanya raporlama
+  - E-posta raporlama
+  - Raporlama
+  - Push Kampanya Raporları
+  - SMS raporlama
+  - SMS kampanya raporlama
+  - Push Raporları
+  - Gönderim Raporlama
+  - E-posta gönderim raporu
+  - Mailing Raporları
+  - Delivery raporu
+  - Mail Raporlama
+  - Email kampanya raporlama
+  - Kampanya Raporları / Tekil Gönderim
+  bolunme:
+    Reporting & Analytics: 213
+    Email Engine: 20
+    Campaign Management: 11
+- name: Custom Report
+  suite: ortak
+  anchor: ui
+  kanit: 60
+  birlesen:
+  - Custom Reporting
+  - Form / Custom Report
+  - Rapor / Custom Report
+  - Özel Raporlar
+  - Ciro Raporlama
+  - Kampanya Ciro Raporlama
+  bolunme:
+    Reporting & Analytics: 53
+    Analytics: 2
+    CDP & Segmentation: 2
+- name: Unsubscribe Raporları
+  suite: campaign
+  anchor: api
+  kanit: 8
+  birlesen:
+  - Unsub raporları
+  bolunme:
+    REST/SOAP API: 4
+    Reporting & Analytics: 3
+    Consent Management (IYS): 1
+onay_tarihi: '2026-08-26'
+onaylayan: <onaylayan>@sirketiniz.com
+onay_notlari:
+- API servis hesapları (*_livem_wsuser) Kullanıcı ve Yetki Yönetimi'nden API Erişimi'ne taşındı.
+- DNS ve Gönderim Domaini, Email Deliverability altında birleştirildi (aynı ekip bakıyor).
+- :Product düğümü kaldırıldı; tek ürün (RMC) var, tek değerli kök düğüm sorgu daraltmaz.
+- 'Euromessage OMNICHANNEL: Email/SMS/Push/WebPush/WhatsApp hepsi campaign suite''inde.'
+- Confluence'taki ayrı 'RMC Mobile' dalı SDK kılavuzudur, ayrı ürün değildir.
+- WhatsApp ürün bilgisiyle eklendi (kanit=0); veri onu keşfedemezdi.
+degisim_kurallari:
+  enum_sadece_buyur: Yanlış modül silinmez; deprecated işaretlenir, superseded_by ile alias'a girer.
+  yeni_modul: carved_from alanı zorunlu — geri doldurmayı sınırlar.
+  null_serbest: Hiçbiri uymuyorsa module=null. Null'lar aylık drift raporunun girdisi.
+  drift_tespiti: Kapalı-dünya içinden boşluk görülmez. Aylık örneklem, kısıtlı VE kısıtsız koşulup karşılaştırılır.

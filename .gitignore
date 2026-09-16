@@ -1,0 +1,22 @@
+# Secrets
+.env
+.env.local
+*.env
+!.env.example
+*-service-account*.json
+*.pem
+*.key
+
+# Data, documents and database dumps (customer data)
+data/
+docs/
+backups/
+rmc_nav_menu.txt
+
+# Local tooling and build artifacts
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.log
+.DS_Store

@@ -1,0 +1,28 @@
+# sırlar — build context'e asla girmez
+.env
+.env.local
+*.env
+!.env.example
+ossvy-*.json
+*-service-account*.json
+*.pem
+*.key
+
+# müşteri verisi — compose'da volume olarak mount edilir, imaja gömülmez
+data/
+
+# çalışma artıkları
+.git/
+.venv/
+venv/
+__pycache__/
+*.pyc
+.chainlit/.files/
+.files/
+*.log
+.DS_Store
+.bak/
+zendesk-graphrag/
+zendesk-graphrag.zip
+docs/
+backups/
